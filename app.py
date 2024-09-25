@@ -13,6 +13,10 @@ def serve_css():
 def serve_images(filename):
     return send_from_directory(os.path.join(os.getcwd(), 'imagenes'), filename)
 
+@app.route('/scripts.js')
+def serve_js():
+    return send_from_directory(os.getcwd(), 'scripts.js')
+
 @app.route('/')
 def home():
     return render_template('index.html')
