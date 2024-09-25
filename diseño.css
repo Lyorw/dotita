@@ -399,3 +399,7 @@ footer {
 .footer-section ul li i {
     color: #808080; /* Color naranja para los iconos de redes sociales */
 }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
