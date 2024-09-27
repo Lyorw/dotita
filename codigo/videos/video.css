@@ -1,0 +1,213 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 20px;
+}
+
+.logo h1 {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.logo .highlight {
+    color: red;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: red;
+    border-radius: 5px;
+}
+
+.icons i {
+    color: white;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background: url('hero-background.jpg') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.hero-content h2 {
+    font-size: 20px;
+    color: #aaa;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    margin: 10px 0;
+}
+
+.hero-content p {
+    font-size: 18px;
+    max-width: 500px;
+}
+
+.hero-buttons {
+    margin-top: 20px;
+}
+
+.play-btn, .info-btn {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.play-btn {
+    background-color: red;
+    color: white;
+}
+
+.info-btn {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+/* Trending Shows Section */
+.trending {
+    padding: 50px;
+    background-color: #202020;
+}
+
+.trending h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.shows-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.show-item {
+    background-size: cover;
+    background-position: center;
+    width: 23%;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.show-item h3 {
+    font-size: 20px;
+}
+
+.show-item p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Genres Section */
+.genres {
+    padding: 50px;
+    background-color: #333;
+}
+
+.genres h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.genres-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.genre-item {
+    width: 30%;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #444;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.genre-item i {
+    font-size: 24px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Premiere Section */
+.premiere {
+    padding: 50px;
+    background-color: #222;
+}
+
+.premiere h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.premiere-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.premiere-info {
+    max-width: 50%;
+}
+
+.premiere-info h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.premiere-info p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.premiere-video img {
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.remind-btn {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
