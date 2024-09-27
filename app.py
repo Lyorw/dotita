@@ -14,7 +14,7 @@ def serve_images(filename):
     return send_from_directory(os.path.join(os.getcwd(), 'imagenes'), filename)
 
 @app.route('/codigo/videos/video.html')
-def serve_js():
+def serve_jse():
     return send_from_directory(os.getcwd(), 'video.html')
 
 @app.route('/scripts.js')
