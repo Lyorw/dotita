@@ -327,8 +327,6 @@ nav ul li a {
 }
 
 
-
-
 /* Estilos generales del pie de página */
 footer {
     background-color: #111; /* Fondo oscuro */
@@ -343,10 +341,13 @@ footer {
     padding: 0 50px;
     max-width: 1200px; /* Limitar el ancho máximo */
     margin: auto; /* Centrar el contenedor */
+    flex-wrap: wrap; /* Wrap content for smaller screens */
 }
 
 .footer-section {
     flex: 1; /* Que cada sección tome el mismo espacio */
+    min-width: 200px; /* Minimum width for each section */
+    margin-bottom: 20px;
 }
 
 .footer-section h4 {
@@ -397,8 +398,36 @@ footer {
 
 /* Iconos en la sección de redes sociales */
 .footer-section ul li i {
-    color: #808080; /* Color naranja para los iconos de redes sociales */
+    color: #808080; /* Color gris claro para los iconos de redes sociales */
 }
+
+/* Footer responsive styling */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack sections vertically */
+        padding: 0 20px; /* Reduce padding */
+    }
+
+    .footer-section {
+        text-align: center; /* Center-align text for mobile */
+        margin-bottom: 20px;
+    }
+
+    .footer-section ul {
+        padding: 0;
+        text-align: center; /* Center list items */
+    }
+
+    .footer-section ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-bottom {
+        padding-top: 20px;
+    }
+}
+
+
 html, body {
     max-width: 100%;
     overflow-x: hidden;
