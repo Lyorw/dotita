@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil de Jugador Dota 2</title>
+</head>
+<body>
+    <h1>Información del Perfil de Jugador</h1>
+    <pre id="player-info"></pre>
+
+    <h2>Últimas 5 partidas</h2>
+    <pre id="match-info"></pre>
+
+    <script>
+        // Account ID del jugador
+        const accountId = '860417273';
+
+        // URL de la API de OpenDota para el perfil del jugador
+        const profileUrl = `https://api.opendota.com/api/players/${accountId}`;
+
+        // URL de la API de OpenDota para las últimas partidas del jugador
+        const matchesUrl = `https://api.opendota.com/api/players/${accountId}/matches?limit=5`;
+
+        // Función para obtener el perfil y la medalla del jugador
+        async function getPlayerProfile() {
+            try {
+                const response = await fetch(profileUrl);
+                const playerData = await response.json();
+
+                if (playerData.profile) {
+                    const profile = playerData.profile;
+                    const rankTier = playerData.rank_tier ? `Medalla: ${Math.floor(playerData.rank_tier / 10)}.${playerData.rank_tier % 10}` : 'Sin medalla';
+
+                    document.getElementById('player-info').innerText = `
+                        Nombre de usuario: ${profile.personaname}
+                        Steam ID: ${profile.steamid}
+                        URL del perfil: ${profile.profileurl}
+                        Avatar: ${profile.avatarfull}
+                        ${rankTier}
+                    `;
+                } else {
+                    document.getElementById('player-info').innerText = 'No se encontró información del jugador.';
+                }
+            } catch (error) {
+                console.error('Error al obtener el perfil:', error);
+                document.getElementById('player-info').innerText = 'Error al obtener el perfil.';
+            }
+        }
+
+        // Función para obtener las últimas 5 partidas del jugador
+        async function getRecentMatches() {
+            try {
+                const response = await fetch(matchesUrl);
+                const matches = await response.json();
+
+                let matchInfoText = '';
+
+                for (const match of matches) {
+                    const matchId = match.match_id;
+                    const matchDetailsUrl = `https://api.opendota.com/api/matches/${matchId}`;
+
+                    // Obtener detalles de la partida
+                    const matchDetailsResponse = await fetch(matchDetailsUrl);
+                    const matchDetails = await matchDetailsResponse.json();
+
+                    const matchDate = new Date(match.start_time * 1000).toLocaleString();
+                    const radiantWin = matchDetails.radiant_win ? 'Radiant' : 'Dire';
+
+                    // Buscar en qué equipo estaba el jugador
+                    let playerTeam = 'Desconocido';
+                    matchDetails.players.forEach(player => {
+                        if (player.account_id == accountId) {
+                            playerTeam = player.isRadiant ? 'Radiant' : 'Dire';
+                        }
+                    });
+
+                    matchInfoText += `Partida ID: ${matchId}, Fecha: ${matchDate}\n`;
+                    matchInfoText += `Resultado: Ganó ${radiantWin}, Jugador en equipo: ${playerTeam}\n\n`;
+                }
+
+                document.getElementById('match-info').innerText = matchInfoText;
+            } catch (error) {
+                console.error('Error al obtener las partidas:', error);
+                document.getElementById('match-info').innerText = 'Error al obtener las partidas.';
+            }
+        }
+
+        // Llamar a las funciones para obtener los datos del perfil y las últimas partidas
+        getPlayerProfile();
+        getRecentMatches();
+    </script>
+</body>
+</html>

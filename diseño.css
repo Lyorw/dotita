@@ -13,10 +13,11 @@ header {
     /* background-image: url('imagenes/banner 1.webp'); */
     /* background-color: black; */
     background-size: cover;
+    position: relative;
+
     background-position: center;
     /* height: 8vh; */
     color: #fff;
-    position: relative;
 } 
 
 .banner-image {
