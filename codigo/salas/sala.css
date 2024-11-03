@@ -338,6 +338,7 @@ html, body {
 /* Sección lateral para Discord y Chat */
 .side-section {
     width: 350px; /* Increase the width as needed */
+    height: 700px;
 }
 
 
@@ -379,12 +380,22 @@ html, body {
     background-color: #2c2f33;
 }
 
+
+
+/* Aplica el borde solo en las filas que no son la última */
+.room-table tr{
+    border-bottom: 1px solid #bebebe;
+}
+
+
+/* Estilo de las celdas */
 .room-table th, .room-table td {
     padding: 10px;
     text-align: center;
-    border-bottom: 1px solid #555555;
     color: #ffffff;
 }
+
+
 
 .room-table tbody tr {
     transition: background-color 0.3s;
@@ -411,6 +422,7 @@ html, body {
 .discord-widget, .chat-general {
     background-color: #2c2f33;
     padding: 20px;
+    height: 660px;
     border-radius: 8px;
     margin-bottom: 20px;
 }
@@ -436,27 +448,193 @@ html, body {
 }
 
 .chat-messages {
-    max-height: 300px;
+    width: 100%;
+    max-height: 200px;
     overflow-y: auto;
-    background-color: #23272a;
-    padding: 10px;
+    background-color: #1f1f1f;
+    padding: 15px;
     border-radius: 8px;
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.4); /* Sombra interna para darle profundidad */
+    margin-bottom: 15px;
 }
-
+/* Estilo de cada mensaje */
+.message {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+/* Campo de entrada de texto */
 .chat-general input[type="text"] {
-    width: calc(100% - 50px);
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #888;
-    background-color: #2c2f33;
-    color: #fff;
+    width: calc(100% - 60px);
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #3a3e42;
+    color: #ffffff;
+    font-size: 14px;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-right: 10px;
 }
 
+
+/* Botón de enviar */
 .chat-general button {
     background-color: #43b581;
-    color: #fff;
+    color: #ffffff;
+    padding: 12px 20px;
     border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.chat-general button:hover {
+    background-color: #36a368;
+    transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+.message .user {
+    font-weight: bold;
+    color: #FFD700; /* Color dorado para el usuario */
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+.message .time {
+    font-size: 12px;
+    color: #b3b3b3;
+    font-weight: normal;
+}
+.chat-general {
+    background-color: #2c2f33;
+    padding: 20px;
+    height: 660px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5); /* Sombra para darle profundidad */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título del chat */
+.chat-general h3 {
+    font-size: 24px;
+    color: #FFD700; /* Color dorado para destacar */
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6); /* Sombra sutil */
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+
+
+
+/* Texto del mensaje */
+.message p {
+    color: #ffffff;
+    background-color: #333;
     padding: 10px;
+    border-radius: 6px;
+    margin: 5px 0;
+    font-size: 14px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+/* Estilos específicos para la imagen de Discord */
+.discord-widget .discord-logo {
+    width: 100%; /* Hace que la imagen ocupe el 100% del ancho de su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px; /* Opcional: aplica bordes redondeados para que coincidan con el diseño */
+}
+
+.discord-widget {
+    background-color: #2c2f33;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Mejorar estilo del texto en el widget de Discord */
+.discord-widget {
+    background-color: #2c2f33;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5); /* Sombra para darle profundidad */
+}
+
+
+/* Estilo para el texto "Evento" en .discord-info */
+.discord-info p {
+    font-size: 22px;
+    color: #FFD700; /* Color dorado para hacerlo destacar */
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6); /* Sombra sutil para resaltar el texto */
+    text-align: center;
+    font-family: 'Montserrat', sans-serif; /* Aplicando la fuente Montserrat */
+    letter-spacing: 1.5px; /* Espaciado adicional entre letras */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    border-bottom: 2px solid #FFD700; /* Línea debajo del texto */
+    padding-bottom: 5px; /* Espacio entre el texto y la línea */
+}
+
+.discord-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.discord-info ul li {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #b3b3b3;
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+.discord-info ul li:hover {
+    color: #ffffff; /* Cambia de color al pasar el ratón */
+}
+
+.discord-info button {
+    background-color: #5865F2;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
+.discord-info button:hover {
+    background-color: #4752c4;
+    transform: scale(1.05); /* Efecto de agrandamiento al pasar el ratón */
+}
+
+.discord-logo {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.7); /* Sombra para la imagen */
+}
+
+
