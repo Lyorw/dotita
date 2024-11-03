@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="sala.css">
     <script src="../../scripts.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet"> -->
 </head>
 <body>
 
@@ -35,78 +34,129 @@
         </nav>
     </header>
 
-    <!-- Sección de Discord y Chat -->
-    <div class="discord-section">
-        <!-- Widget de Discord -->
-        <div class="discord-widget">
-            <h3>Discord</h3>
-            <div class="discord-info">
-                <p>Evento</p>
-                <ul>
-                    <li>🎮 RetosDotaTV</li>
-                    <li>💡 -Predicciones</li>
-                    <li>🛠️ -Soporte</li>
-                    <li>🐱 -Gatos</li>
-                </ul>
-                <button>Join Discord</button>
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Left Sección de Discord y Chat -->
+        <div class="side-section">
+            <!-- Widget de Discord -->
+            <div class="discord-widget">
+                <h3>Discord</h3>
+                <div class="discord-info">
+                    <p>Evento</p>
+                    <ul>
+                        <li>🎮 RetosDotaTV</li>
+                        <li>💡 -Predicciones</li>
+                        <li>🛠️ -Soporte</li>
+                        <li>🐱 -Gatos</li>
+                    </ul>
+                    <button>Join Discord</button>
+                </div>
+            </div>
+
+            <!-- Chat general -->
+            <div class="chat-general">
+                <h3>Chat general</h3>
+                <div class="chat-messages">
+                    <!-- Mensajes de ejemplo -->
+                    <div class="message">
+                        <span class="user">MODERADOR</span>
+                        <span class="time">19:50</span>
+                        <p>Mensaje de ejemplo</p>
+                    </div>
+                    <div class="message">
+                        <span class="user">HOST</span>
+                        <span class="time">19:52</span>
+                        <p>Otro mensaje de ejemplo</p>
+                    </div>
+                </div>
+                <input type="text" placeholder="Tu mensaje">
+                <button>Enviar</button>
             </div>
         </div>
 
-        <!-- Chat general -->
-        <div class="chat-general">
-            <h3>Chat general</h3>
-            <div class="chat-messages">
-                <!-- Mensajes de ejemplo -->
-                <div class="message">
-                    <span class="user">MODERADOR</span>
-                    <span class="time">19:50</span>
-                    <p>Mensaje de ejemplo</p>
-                </div>
-                <div class="message">
-                    <span class="user">HOST</span>
-                    <span class="time">19:52</span>
-                    <p>Otro mensaje de ejemplo</p>
+        <!-- Sección de Salas -->
+        <div class="table-section">
+            <div class="table-header">
+                <button>Salas</button>
+                <button>Mi sala</button>
+                <button>Crear sala</button>
+                <button>Enviar saldo</button>
+            </div>
+            <table class="room-table">
+                <thead>
+                    <tr>
+                        <th>Nro.</th>
+                        <th>Modo</th>
+                        <th>Entrada</th>
+                        <th>Ganancia</th>
+                        <th>Jugadores</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Ejemplo de fila -->
+                    <tr>
+                        <td>2</td>
+                        <td>Selección con capitanes</td>
+                        <td>S/ 11.00</td>
+                        <td>S/ 20.00</td>
+                        <td class="jugadores">
+                            <!-- 10 círculos para jugadores -->
+                            <img src="../../imagenes/Color_negro.jpg" alt="Jugador 1">
+                            <img src="../../imagenes/Color_negro.jpg" alt="Jugador 2">
+                            <img src="../../imagenes/Color_negro.jpg" alt="Jugador 3">
+                            <img src="../../imagenes/Color_negro.jpg" alt="Jugador 4">
+                            <img src="../../imagenes/Color_negro.jpg" alt="Jugador 5">
+                            <img src="../../imagenes/Color_negro.jpg" alt="Jugador 6">
+                            <img src="../../imagenes/Color_negro.jpg" alt="Jugador 7">
+                            <img src="../../imagenes/Color_negro.jpg" alt="Jugador 8">
+                            <img src="../../imagenes/Color_negro.jpg" alt="Jugador 9">
+                            <img src="../../imagenes/Color_negro.jpg" alt="Jugador 10">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Right Sección de Discord y Chat (Duplicated) -->
+        <div class="side-section">
+            <!-- Widget de Discord -->
+            <div class="discord-widget">
+                <h3>Discord</h3>
+                <div class="discord-info">
+                    <p>Evento</p>
+                    <ul>
+                        <li>🎮 RetosDotaTV</li>
+                        <li>💡 -Predicciones</li>
+                        <li>🛠️ -Soporte</li>
+                        <li>🐱 -Gatos</li>
+                    </ul>
+                    <button>Join Discord</button>
                 </div>
             </div>
-            <input type="text" placeholder="Tu mensaje">
-            <button>Enviar</button>
+
+            <!-- Chat general -->
+            <div class="chat-general">
+                <h3>Chat general</h3>
+                <div class="chat-messages">
+                    <!-- Mensajes de ejemplo -->
+                    <div class="message">
+                        <span class="user">MODERADOR</span>
+                        <span class="time">19:50</span>
+                        <p>Mensaje de ejemplo</p>
+                    </div>
+                    <div class="message">
+                        <span class="user">HOST</span>
+                        <span class="time">19:52</span>
+                        <p>Otro mensaje de ejemplo</p>
+                    </div>
+                </div>
+                <input type="text" placeholder="Tu mensaje">
+                <button>Enviar</button>
+            </div>
         </div>
     </div>
 
-    <!-- Sección de Salas -->
-    <div class="table-section">
-        <div class="table-header">
-            <button>Salas</button>
-            <button>Mi sala</button>
-            <button>Crear sala</button>
-            <button>Enviar saldo</button>
-        </div>
-        <table class="room-table">
-            <thead>
-                <tr>
-                    <th>Nro.</th>
-                    <th>Modo</th>
-                    <th>Entrada</th>
-                    <th>Ganancia</th>
-                    <th>Jugadores</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Ejemplo de fila -->
-                <tr>
-                    <td>2</td>
-                    <td>Selección con capitanes</td>
-                    <td>S/ 11.00</td>
-                    <td>S/ 20.00</td>
-                    <td>
-                        <img src="path_to_player_image1.png" alt="Jugador 1">
-                        <img src="path_to_player_image2.png" alt="Jugador 2">
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
+    <!-- Footer -->
     <footer>
         <div class="footer-container">
             <div class="footer-section">
