@@ -10,75 +10,130 @@
     <script src="../../scripts.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- <link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet"> -->
-
 </head>
 <body>
-    
 
     <!-- Header Section -->
     <header>
         <nav>
-            <nav>
-                <div class="logo">
-                    <h1>
-                        <span class="blanco">DOTA2</span><span class="plomo">WARRIORS</span>
-                    </h1>
-                </div>
-            </nav>
-            
+            <div class="logo">
+                <h1>
+                    <span class="blanco">DOTA2</span><span class="plomo">WARRIORS</span>
+                </h1>
+            </div>
             <div class="menu-toggle">
                 <i class="fas fa-bars"></i>
             </div>
             <ul class="nav-links">
                 <li><a href="/dotita/index.html">Inicio</a></li>
-
-                <!-- <li><a href="../../index.html">Inicio</a></li> -->
                 <li><a href="#">Salas</a></li>
                 <li><a href="#">Partidas</a></li>
                 <li><a href="#">Ranking</a></li>
                 <li><a href="codigo/videos/video.html">Videos</a></li>
                 <li><a href="#">Contactenos</a></li>
-         
             </ul>
         </nav>
     </header>
 
+    <!-- Sección de Discord y Chat -->
+    <div class="discord-section">
+        <!-- Widget de Discord -->
+        <div class="discord-widget">
+            <h3>Discord</h3>
+            <div class="discord-info">
+                <p>Evento</p>
+                <ul>
+                    <li>🎮 RetosDotaTV</li>
+                    <li>💡 -Predicciones</li>
+                    <li>🛠️ -Soporte</li>
+                    <li>🐱 -Gatos</li>
+                </ul>
+                <button>Join Discord</button>
+            </div>
+        </div>
 
+        <!-- Chat general -->
+        <div class="chat-general">
+            <h3>Chat general</h3>
+            <div class="chat-messages">
+                <!-- Mensajes de ejemplo -->
+                <div class="message">
+                    <span class="user">MODERADOR</span>
+                    <span class="time">19:50</span>
+                    <p>Mensaje de ejemplo</p>
+                </div>
+                <div class="message">
+                    <span class="user">HOST</span>
+                    <span class="time">19:52</span>
+                    <p>Otro mensaje de ejemplo</p>
+                </div>
+            </div>
+            <input type="text" placeholder="Tu mensaje">
+            <button>Enviar</button>
+        </div>
+    </div>
+
+    <!-- Sección de Salas -->
+    <div class="table-section">
+        <div class="table-header">
+            <button>Salas</button>
+            <button>Mi sala</button>
+            <button>Crear sala</button>
+            <button>Enviar saldo</button>
+        </div>
+        <table class="room-table">
+            <thead>
+                <tr>
+                    <th>Nro.</th>
+                    <th>Modo</th>
+                    <th>Entrada</th>
+                    <th>Ganancia</th>
+                    <th>Jugadores</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Ejemplo de fila -->
+                <tr>
+                    <td>2</td>
+                    <td>Selección con capitanes</td>
+                    <td>S/ 11.00</td>
+                    <td>S/ 20.00</td>
+                    <td>
+                        <img src="path_to_player_image1.png" alt="Jugador 1">
+                        <img src="path_to_player_image2.png" alt="Jugador 2">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Información</h4>
+                <ul>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Sitio web en desarrollo <i class="fas fa-wrench"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>Email: <a href="mailto:contacto@DOTA2WARRIORS.com">contacto@DOTA2WARRIORS.com</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Redes sociales</h4>
+                <ul>
+                    <li><i class="fab fa-facebook"></i> <a href="#">Facebook</a></li>
+                    <li><i class="fab fa-discord"></i> <a href="#">Discord</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 DOTA2WARRIORS.com</p>
+        </div>
+    </footer>
 
     <script src="scripts.js"></script>
-
-
-
-
 </body>
-<footer>
-    <div class="footer-container">
-        <div class="footer-section">
-            <h4>Información</h4>
-            <ul>
-                <li><a href="#">Política de Privacidad</a></li>
-                <li><a href="#">Términos y Condiciones</a></li>
-                <li><a href="#">Sitio web en desarrollo <i class="fas fa-wrench"></i></a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h4>Contacto</h4>
-            <p>Email: <a href="mailto:contacto@DOTA2WARRIORS.com">contacto@DOTA2WARRIORS.com</a></p>
-        </div>
-
-        <div class="footer-section">
-            <h4>Redes sociales</h4>
-            <ul>
-                <li><i class="fab fa-facebook"></i> <a href="#">Facebook</a></li>
-                <li><i class="fab fa-discord"></i> <a href="#">Discord</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>© 2024 DOTA2WARRIORS.com</p>
-    </div>
-</footer>
-
-
 </html>
